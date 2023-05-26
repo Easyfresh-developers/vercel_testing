@@ -6,8 +6,9 @@ const router = express.Router();
  *
  * @return product list | empty.
  */
-router.get("/", async (req, res) => {
-  console.log('reached to api for the first time');
+
+module.exports = (req, res) => {
+  console.log("reached to api for the first time");
   try {
     res.send({
       status: 200,
@@ -17,6 +18,8 @@ router.get("/", async (req, res) => {
     console.error(error);
     return res.status(500).send("Server error");
   }
-});
+};
+// router.get("/", async
+// });
 
 module.exports = router;
