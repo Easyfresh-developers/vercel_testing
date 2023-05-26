@@ -7,8 +7,9 @@ const router = express.Router();
  * @return product list | empty.
  */
 router.get("/", async (req, res) => {
+  console.log('reached to api');
   try {
-    res.json({
+    res.send({
       status: 200,
       message: "Get data has successfully",
     });
